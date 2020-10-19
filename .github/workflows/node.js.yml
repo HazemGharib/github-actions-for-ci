@@ -8,6 +8,16 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    branches: [ master ]
+    inputs:
+      tag:
+        description: 'Tag name or number for the release'     
+        required: true
+      deploy_to:
+        description: 'Deployment environment'     
+        required: true
+        default: ['staging', 'production']
 
 jobs:
   build:
