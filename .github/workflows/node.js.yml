@@ -17,8 +17,7 @@ on:
       deploy_to:
         description: 'Deployment environment'     
         required: true
-        default: ['staging', 'production']
-
+        default: 'staging'
 jobs:
   build:
     runs-on: ubuntu-latest
